@@ -1,7 +1,7 @@
 const {Router} = require('express');
 const usersRouter = Router();
 
-usersRouter.get('/', async (req, res) => {
+usersRouter.post('/', async (req, res) => {
     try {
     res.send('Funciona');
     } catch (error) {
