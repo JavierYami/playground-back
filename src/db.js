@@ -1,12 +1,13 @@
 require('dotenv').config();
+const {DB_NAME, DB_USER, DB_PASSWORD, DB_HOST} = process.env;
 const Sequelize = require('sequelize');
 
 const sequelize = new Sequelize(
-    'playgrounddb',
-    'root',
-    '',
+    DB_NAME,
+    DB_USER,
+    DB_PASSWORD,
      {
-       host: 'localhost',
+       host: DB_HOST,
        dialect: 'mysql'
      }
    );
