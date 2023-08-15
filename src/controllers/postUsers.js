@@ -9,8 +9,7 @@ const createUser = async ({first_name, last_name, email, password}) => {
         password
     });
 
-    if(newUser) return newUser;
-
+    return newUser;
 }
 
 module.exports = {

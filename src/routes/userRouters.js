@@ -6,7 +6,7 @@ usersRouter.post('/', async (req, res) => {
     try {
         const {userInfo} = req.body;
         const newUser = await createUser(userInfo);
-        res.status(201).send({newUser});
+        res.status(201).send(newUser);
     } catch (error) {
         res.status(400).send(error);
     }

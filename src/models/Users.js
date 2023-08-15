@@ -9,20 +9,20 @@ const User = (sequelize) => {
         },
         first_name: {
             type: DataTypes.STRING,
-            allowNUll: false
+            allowNull: false
         },
         last_name:{
             type: DataTypes.STRING,
-            allowNUll: false
+            allowNull: false
         },
         email:{
             type: DataTypes.STRING,
-            allowNUll: false,
+            allowNull: false,
             unique: true
         },
         password:{
             type: DataTypes.STRING,
-            allowNUll: false
+            allowNull: false
         },
         is_active:{
             type: DataTypes.BOOLEAN,
