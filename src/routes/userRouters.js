@@ -1,11 +1,14 @@
 const {Router} = require('express');
 const usersRouter = Router();
+const {createUser} = require('../controllers/postUsers');
 
 usersRouter.post('/', async (req, res) => {
     try {
-    res.send('Funciona');
+        const {userInfo} = req.body;
+        const newUser = await createUser(userInfo);
+        res.status(201).send({newUser});
     } catch (error) {
-    console.log(error)
+        res.status(400).send(error);
     }
 });
 

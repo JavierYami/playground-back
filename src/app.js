@@ -4,9 +4,12 @@ const { mainRouter } = require('./routes/index');
 
 const server = express();
 
+server.use(express.json());
+
+
 server.use(morgan('dev'));
 
-server.use(mainRouter)
+server.use(mainRouter);
 
 module.exports = {
     server
