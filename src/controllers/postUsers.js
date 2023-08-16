@@ -9,7 +9,7 @@ const createUser = async ({first_name, last_name, email, password}) => {
         password
     });
 
-    return newUser;
+    return {newUser, message: 'Success'};
 }
 
 module.exports = {
