@@ -8,7 +8,7 @@ usersRouter.post('/', async (req, res) => {
         const newUser = await createUser(userInfo);
         res.status(201).send(newUser);
     } catch (error) {
-        res.status(400).send(error);
+        res.status(400).json(error.message);
     }
 });
 
