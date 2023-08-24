@@ -5,7 +5,6 @@ const mainRouter = Router();
 
 mainRouter.use('/users', usersRouter);
 
-
 module.exports = {
     mainRouter
 }
